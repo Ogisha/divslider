@@ -1,0 +1,219 @@
+#logoImg {
+    min-width: 50px;
+    max-width: 115px;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background:rgba(153, 153, 153, .1);
+}
+
+li {
+    list-style-type: none;
+}
+
+label {
+    font-weight: 500;
+}
+
+.list-inline {
+    width:100%;
+}
+
+.list-inline li {
+    width: 49%;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 4px 8px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    background-color:transparent;
+    border: none;
+    color: cornflowerBlue;
+}
+
+.pagination li a:hover {
+    background-color:#337ab7;
+    border-radius: 16px;
+    color: white;
+}
+
+/*  BODY end  */
+
+/*  OPTIONS (COMPONENT)  */
+.optionsBtn {
+    margin-bottom: 1.5%;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right: 10px;
+    color: #222;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 12px 12px;
+    font-size: 14px;
+    line-height: 15px;
+    border: 1px solid #bbb;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+    background-color: #FFF;
+}
+
+.dropdownDiv {
+    margin-top: 2%;
+}
+
+.optionsBtn {
+    width: 100%;
+}
+
+.dropdown-menu > li > a {
+    line-height: 2.2;
+
+}
+
+.text-right label {
+    margin-left: 8px;
+}
+/*  OPTIONS (COMPONENT) end  */
+
+/*  TASKS (COMPONENT) end  */
+
+/*  TASKS (COMPONENT) end  */
+
+input[name=tasksNum] {
+    margin-left: 15px;
+}
+
+.task {
+    margin: 7.5% 0;
+    background: white;
+    padding: 3%;
+    border: 1px solid #999;
+    border-radius: 8px;
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.task div p, .task div a {
+    color: #888;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.task div a {
+    text-decoration: underline;
+}
+
+#regA {
+    color: #0659C8;
+    display: block;
+}
+
+blockquote {
+    text-indent: 20px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.task h3 {
+    display: inline;
+    margin-left: 2.5%;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+@media only screen and (max-width: 1210px) {
+    .list-inline li {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #logoImg {
+        width: 85px;
+    }
+    #headerComponent h2 {
+        font-size: 23px;
+        margin-top: 13px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #logoImg {
+        width: 65px;
+    }
+    #headerComponent h2 {
+        font-size: 19px;
+        margin-top: 11px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #logoImg {
+        width: 45px;
+    }
+    #headerComponent h2 {
+        font-size: 17px;
+        margin-top:7px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .optionsBtn {
+        font-size: 12px;
+    }
+    .dropdown-menu {
+        font-size: 12px;
+    }
+
+    .dropdownDiv {
+        margin-top: 5%;
+    }
+
+    #logoImg {
+        width:25px;
+    }
+
+    #headerComponent h2 {
+        font-size: 15px;
+        margin-top: 9px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .pagination {
+        display: none;
+    }
+}
