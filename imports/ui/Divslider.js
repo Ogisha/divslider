@@ -3,9 +3,7 @@ import Header from './Header';
 import Options from './Options';
 import {Tasks} from './../api/tasks';
 
-
 export default class Divslider extends React.Component {
-
     renderForm(e) {
         e.preventDefault();
 
@@ -27,7 +25,12 @@ export default class Divslider extends React.Component {
         e.target.projectName.value = "";
         e.target.taskName.value = "";
         e.target.taskDesc.value = "";
-        $("#formSubmitInfo1").toggleClass("hidden");
+        $("#formSubmitInfo1").toggleClass("hidden").css("color", "green");
+    }
+
+    emptyDb() {
+        Meteor.call('removeAllTasks');
+        $("#formSubmitInfo2").toggleClass("hidden").css("color", "green");
     }
 
     render() {
@@ -86,9 +89,13 @@ export default class Divslider extends React.Component {
                             </div>
                 
                             <div className="modal-body">
-                                <button className="btn btn-danger" onClick={() => Meteor.call('removeAllTasks')}type="submit">Yes, empty the tasks list</button>
-                                <button type="button" className="btn btn-info" data-dismiss="modal">No, get me out of here</button>
-                                <span id="formSubmitinfo2" className="hidden"><i> The tasks list is now empty!</i></span>
+                                <button className="emptyDbBtn btn btn-danger" onClick={(e) => {
+                                    alert("Successfully done!");
+                                    return Meteor.call('removeAllTasks');
+                                    } 
+                                } type="submit">Yes, empty the tasks list</button>
+                                <button type="button" className="emptyDbBtn btn btn-info" data-dismiss="modal">No, get me out of here</button>
+                                <span id="formSubmitInfo2" className="hidden"><i> The tasks list is now empty!</i></span>
                             </div>
                         </div>
                         </div>

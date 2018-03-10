@@ -34,7 +34,7 @@ export default class Options extends React.Component {
                             </button>
                     
                             <ul className="dropdown-menu">
-                                <li>
+                                <li id="hiddeLi">
                                     <a href="/#">Number of columns in a row:
                                     <ul>
                                         <li>

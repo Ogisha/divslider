@@ -11,7 +11,7 @@ export default class Header extends React.Component {
             <div id="headerComponent">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xs-2 col-md-2">
+                        <div id="headerImg" >
                             <a href="https://activecollab.com">
                                 <img
                                     id="logoImg" 
@@ -20,7 +20,7 @@ export default class Header extends React.Component {
                             </a>
                          </div>
             
-                        <div className="col-xs-10 col-md-10 text-left">
+                        <div className="col-xs-12 col-md-12 text-center">
                             <h2>Welcome to the Task-slider demo!<br />
                                 <small className="text-right">by 
                                 <a className="text-right" href={this.returnEmail()}> {this.props.author}</a>

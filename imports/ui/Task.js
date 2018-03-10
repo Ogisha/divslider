@@ -12,15 +12,9 @@ export default class Task extends React.Component {
         return shortId.slice(0,3).toUpperCase();
     }
 
-    isChecked(e) {
-        if (!this.checked) 
-            console.log("on");
-        else    
-            console.log("off");
-        
-        Tasks.update({_id: this.props.task._id}, {$set: {active: false}});
-        console.log($(this))
-
+    isCompleted() {
+        if (this.props.task.active == false)
+            return <img id="imgDone" className="img-responsive" src="http://files.softicons.com/download/system-icons/windows-8-metro-invert-icons-by-dakirby309/png/256x256/Other/Tasks.png" />;
     }
 
     render() {
@@ -33,20 +27,14 @@ export default class Task extends React.Component {
 
                     <p>Created by {this.props.task.name} on <span id={this.getShortId()}>{this.props.task.dateAdded}</span></p><br />
 
-                    <label><span className="hidden">completed</span>
+                    <label><span className="exp">{this.isCompleted()}</span>
                     <input type="checkbox" name="taskCompleted" onClick={(e) => {
-                        if (e.target.checked) {
+                        if (e.target.checked) 
                            Tasks.update({_id: this.props.task._id}, {$set: {active: false}});
-                           console.log("Set: false - complete");
-                        }
-
-                        else {
+                        else 
                             Tasks.update({_id: this.props.task._id}, {$set: {active: true}});
-                            console.log("Set: true - complete");
-                        }
                     } 
                 } />
-
                     </label>
 
                     <h3>{this.props.task.task}</h3>
@@ -62,10 +50,9 @@ export default class Task extends React.Component {
                 </div>
           </div>
         );
-
     }
 };
-/*
+
 Task.propTypes = {
     task: PropTypes.object.isRequired
-}*/
+}
