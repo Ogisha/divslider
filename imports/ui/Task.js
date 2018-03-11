@@ -14,7 +14,7 @@ export default class Task extends React.Component {
 
     isCompleted() {
         if (this.props.task.active == false)
-            return <img id="imgDone" className="img-responsive" src="http://files.softicons.com/download/system-icons/windows-8-metro-invert-icons-by-dakirby309/png/256x256/Other/Tasks.png" />;
+            return <img id="imgDone" className="img-responsive" src="./tasks-icon-10.png" />;
     }
 
     render() {
