@@ -6,8 +6,8 @@ JS notes:
 - ES5, ES6
 - Meteor as framework and the structure
 - React.js as templating library
-- jQuery - for some (but just a little bit of) animations and instant DOM manipulation
-
+- jQuery - for some (but just a little bit of) animations and instant DOM manipulation (old habits die hard... )
+- no external scripts or borrowed functionality!
 
 features (overall):
 - integrated db where a user can enter, save and query the task related data

@@ -17,19 +17,19 @@ label {
 }
 
 .emptyDbBtn {
-    width:70%;
-    margin-left:15%;
+    width: 70%;
+    margin-left: 15%;
     margin-bottom: 2%;
 }
 
 #headerImg {
     position: fixed;
-    left:50px;
+    left: 50px;
     z-index: 10;
 }
 
 .list-inline {
-    width:100%;
+    width: 100%;
 }
 
 .list-inline li {
@@ -42,13 +42,11 @@ label {
 }
 
 .exp {
-    position: absolute;
-    top: 26%;
-    right: 7.5%;
+    float:right;
 }
 
 #imgDone {
-    width: 35px;
+    width: 30px;
 }
 
 .pagination > li > a, .pagination > li > span {
@@ -126,6 +124,10 @@ input[name=tasksNum] {
     max-height: 400px;
     overflow-y:scroll;
     overflow-x:hidden;
+}
+
+.countTasks {
+    color: cornflowerblue;
 }
 
 .task div p, .task div a {
@@ -210,6 +212,9 @@ html {
         font-size: 17px;
         margin-top:7px;
     }
+    #imgDone {
+        width: 20px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -242,9 +247,5 @@ html {
 @media only screen and (min-width: 768px) {
     .pagination {
         display: none;
-    }
-
-    #imgDone {
-        width: 25px;
     }
 }

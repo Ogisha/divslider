@@ -17,7 +17,6 @@ export default class TasksList extends React.Component {
     returnCustomId(x) {
         let count = x;
         count = Number(count.slice(-1));
-        console.log(count);
         this.setState({
             custId: count
         });
@@ -57,8 +56,9 @@ export default class TasksList extends React.Component {
 
                 if (!!newObj[temp])
                     return <Task key={task._id} cols={this.props.cols} task={newObj[temp]} />
+                    
                 else
-                    return <Task key={task._id} cols={this.props.cols} task={newObj[temp - 1]} />
+                    return <Task key={task._id} cols={this.props.cols} task={newObj[0]} />
             }
 
             else {

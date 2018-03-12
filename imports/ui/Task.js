@@ -25,19 +25,20 @@ export default class Task extends React.Component {
                         <a href="/#">{this.props.task.project}</a>  -  Task no.{this.props.task.custom_id}
                     </p>
 
-                    <p>Created by {this.props.task.name} on <span id={this.getShortId()}>{this.props.task.dateAdded}</span></p><br />
+                    <p>Created by {this.props.task.name} on:
+                        <span>{this.props.task.dateAdded}</span>
+                    </p><br />
 
-                    <label><span className="exp">{this.isCompleted()}</span>
-                    <input type="checkbox" name="taskCompleted" onClick={(e) => {
-                        if (e.target.checked) 
-                           Tasks.update({_id: this.props.task._id}, {$set: {active: false}});
-                        else 
-                            Tasks.update({_id: this.props.task._id}, {$set: {active: true}});
-                    } 
-                } />
+                    <label>
+                        <input type="checkbox" name="taskCompleted" onClick={(e) => {
+                            if (e.target.checked) 
+                                Tasks.update({_id: this.props.task._id}, {$set: {active: false}});
+                            else 
+                                Tasks.update({_id: this.props.task._id}, {$set: {active: true}});
+                        }} />
                     </label>
 
-                    <h3>{this.props.task.task}</h3>
+                    <h3>{this.props.task.task}<small className="exp">{this.isCompleted()}</small></h3>
 
                     <a id="regA" href="/#">{this.props.task.taskLink}</a><br />
 
@@ -53,6 +54,6 @@ export default class Task extends React.Component {
     }
 };
 
-Task.propTypes = {
+Tasks.propTypes = {
     task: PropTypes.object.isRequired
 }

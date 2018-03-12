@@ -1,5 +1,6 @@
 import React from 'react';
 import TasksList from './TasksList';
+import {Tasks} from './../api/tasks';
 
 export default class Options extends React.Component {
     constructor(props) {
@@ -66,15 +67,18 @@ export default class Options extends React.Component {
                                         <li>
                                         <form className="text-right">
                                             <label>
-                                                <input type="radio" name="tasksCompleted" value="yes" onClick={(e) => this.returnCols(e.target.value)} /> Active
+                                                <input type="radio" name="tasksCompleted" value="yes" onClick={(e) => this.returnCols(e.target.value)} /> Active 
+                                                <small><i><span className="countTasks">({Tasks.find({active: true}).fetch().length})</span></i></small>
                                             </label>
                 
                                             <label>
-                                                <input type="radio" name="tasksCompleted" value="no" onClick={(e) => this.returnCols(e.target.value)} /> Completed
+                                                <input type="radio" name="tasksCompleted" value="no" onClick={(e) => this.returnCols(e.target.value)} /> Completed 
+                                                <small><i><span className="countTasks">({Tasks.find({active: false}).fetch().length})</span></i></small>
                                             </label>
                                             
                                             <label>
-                                                <input type="radio" name="tasksCompleted" value="all" onClick={(e) => this.returnCols(e.target.value)} /> All
+                                                <input type="radio" name="tasksCompleted" value="all" onClick={(e) => this.returnCols(e.target.value)} /> All 
+                                                <small><i><span className="countTasks">({Tasks.find().fetch().length})</span></i></small>
                                             </label>
                                         </form>
                                         </li>
