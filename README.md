@@ -23,3 +23,6 @@ task and, also, the display by the requested number of columns)
 features (on smaller displays):
 - customized display for mobile screens
 - pagination
+- note for testing/demonstration purposes: the switch between the displays doesn't happen on resize (purpose is 
+understandable, I believe) but on the load (even more understandable, since you wouldn't toggle 
+displays/resize screens in real time :-))
